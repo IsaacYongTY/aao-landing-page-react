@@ -1,0 +1,304 @@
+@import './_variables';
+
+@import "react-alice-carousel/lib/scss/alice-carousel.scss";
+
+@import './Padlet';
+@import './Sidebar';
+@import './NavBar';
+@import './Carousel';
+
+
+.App {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    overflow-x:hidden;
+    
+  }
+
+.app-logo-container {
+    position:absolute;
+    top:0;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+    background-image: url('../img/aao-logo-colour.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 40rem;
+    height: 20rem;
+    
+    
+}
+
+.app-logo {
+    
+   
+    height: 22vmin;
+    align-items: center;
+    justify-content: center;
+    
+  
+}
+
+
+
+@media screen and (max-width: 960px) {
+    .app-logo-container {
+        background-image: url('../img/aao-logo-only.png');
+        height: 15rem;
+        width: 15rem;
+        
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .app-logo-container {
+        background-image: none;
+        height: 0;
+    }
+
+    .app-logo-container.sticky {
+        background-image: none;
+    }
+
+    .whitespace {
+        height: 0;
+    }
+
+    .social-media-button {
+        margin: 0.5rem;
+    }
+}
+
+.social-media-handle-container {
+    width:25rem;
+    height: 6rem;
+    align-items: center;
+    margin:0;
+}
+
+
+.social-media-button {
+    display:inline-block;
+    text-align: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    margin: 0 1.5rem;
+    background-repeat: no-repeat;
+    
+}
+
+
+
+.banner {
+    width:100vw;
+    height: 35vmax;
+  
+    margin-top: 9rem;
+    background-image: url('../img/aao-website-banner.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 720px) {
+  .banner {
+    width: 100vw;
+    height: 130vmin;
+    background-size: contain;
+    margin-top: 3rem;
+    background-image: url('../img/aao-ig-square-2.jpg');    
+    }
+}
+
+.teaser-video {
+
+
+}
+
+@media screen and (max-width: 1280px) {
+  .teaser-video {
+    position: relative;
+    overflow: hidden;
+    
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 56.25%;
+  }
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  
+}
+
+
+
+.teaser-section {
+  justify-content: center;
+  align-items: center;
+}
+.translation-tab {
+    width: 20rem;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    
+}
+  
+  
+  .footer {
+    background-color: $yellow;
+    height: 12rem;
+
+    font-size: 1.6rem;
+   
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   
+  }
+
+  .footer div {
+    margin: 0 auto;
+    width: 30rem;
+    display: flex;
+    justify-content: center;
+ 
+  }
+  
+  button {
+    cursor: pointer;
+    z-index: 2;
+  }
+  
+  .primary-button {
+    font-size: 2.4rem;
+    justify-content: center;
+    font-weight: 700;
+    padding: 1.6rem;
+    background-color: transparent;
+    border-color: lightblue;
+    border-radius: 0.5rem;
+    
+  }
+  
+
+  .rsvp-button {
+    margin: 0 5rem;
+    max-width: 40rem;
+    border: none;
+    color: #ffffff;
+    background-color: $dark-blue;
+  }
+  
+  .rsvp-button:focus {
+    outline: none;
+  }
+  .navbar-button-container {
+    width: 100%;
+  }
+  
+
+  
+
+  .about-section {
+    width: 80vmin;
+    font-size: 2.4rem;
+    margin: 0 auto;
+    padding: 2.4rem 0;
+  }
+
+  .about-section a {
+    text-decoration: none;
+  }
+
+  .about-section a:visited {
+      color: $dark-grey;
+  }
+
+  .wall-section {
+    font-size: 2.4rem;
+    width: 100vw;
+    min-height: 1200px;
+  }
+  
+  @media screen and (max-width: 720px) {
+    .about-section {
+      width: 90%;
+    }
+  }
+
+.zh {
+    font-family: 'ZCOOL XiaoWei', serif;
+}
+
+.highlight {
+    font-weight: 600;
+    color:$dark-blue;
+}
+
+.language-selected {
+    font-weight: 600;
+}
+
+.translation-tab {
+    font-weight: 600;
+    padding-bottom: 1rem;
+    text-decoration: none;
+    text-decoration: underline;
+    color: $dark-blue;
+    
+}
+
+.translation-tab a:hover {
+    cursor: pointer   ;
+   
+}
+
+
+
+
+
+@media screen and (max-width: 720px) {
+    span {
+        display: block;
+    }
+}
+
+.prizes-section {
+  margin-bottom: 5rem;
+}
+
+.prizes-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
+.prize-container img {
+  max-width: 85%;
+}
+
+@media screen and (max-width: 600px) {
+  .prizes-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .prize-container {
+    margin: 1rem 0;
+  }
+  
+}
